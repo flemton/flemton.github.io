@@ -3,7 +3,7 @@
 const config = {
   github: {
     username: 'flemton', // Your GitHub org/user name. (Required)
-    sortBy: 'updated', // stars | updated
+    sortBy: 'stars', // stars | updated
     limit: 15, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
@@ -19,10 +19,7 @@ const config = {
     dribbble: '',
     behance: '',
     medium: 'newtongh',
-    dev: 'newtongh',
     stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
-    telegram: '',
     website: '',
     phone: '+233554374251',
     email: 'oalhassan847@gmail.com',
@@ -33,9 +30,11 @@ const config = {
   },
   skills: [
     'JavaScript',
+    'Ruby',
     'React.js',
     'Node.js',
-    'Nest.js',
+    'Ruby on Rails',
+    'Python',
     'MySQL',
     'PostgreSQL',
     'Git',

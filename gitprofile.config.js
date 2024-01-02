@@ -7,7 +7,7 @@ const config = {
     limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['my-portfolio'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -24,16 +24,14 @@ const config = {
     skype: '',
     telegram: '',
     website: '',
-    phone: '',
+    phone: '+233554374251',
     email: 'oalhassan847@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.usercontent.google.com/download?id=1kmuNfWz_NIJ3SnI1fgvYJATLLAA8ArdT&export=download&authuser=0&confirm=t&uuid=387a9fb4-f1af-4fda-b0fc-ea0793a6e850&at=APZUnTUX64sTtR_Yl0oe0rsU_avP:1704232842000', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
     'React.js',
     'Node.js',
@@ -41,11 +39,7 @@ const config = {
     'MySQL',
     'PostgreSQL',
     'Git',
-    'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
-    'Tailwind',
   ],
   experiences: [
     {
@@ -74,21 +68,21 @@ const config = {
   education: [
     {
       institution: 'Microverse',
-      degree: 'Degree',
+      degree: 'Full Stack Development',
       from: '2022',
       to: '2023',
     },
     {
       institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      degree: 'Certifcate',
+      from: '2021',
+      to: '2021',
     },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
-    {
+    /*{
       title: 'Project Name',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
@@ -101,11 +95,11 @@ const config = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
       link: 'https://example.com',
-    },
+    },*/
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
+    source: 'medium', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },

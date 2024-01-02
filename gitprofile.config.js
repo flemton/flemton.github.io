@@ -3,11 +3,11 @@
 const config = {
   github: {
     username: 'flemton', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    sortBy: 'updated', // stars | updated
+    limit: 15, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: ['my-portfolio'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['my-portfolio', 'flemton.github.io', 'flemton'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -57,14 +57,20 @@ const config = {
       companyLink: 'https://upwork.com',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'Microverse Ruby on Rails Module',
+      body: 'This demonstrates mastery of Ruby on Rails by building multiple real-world Rails applications alongside software developers from all over the world',
+      year: 'December 2023',
+      link: 'https://www.credential.net/d5fa78eb-5d2c-4233-adb7-1cd2d87d7452'
     },
-  ], */
+    {
+      name: 'Microverse Ruby/Databases Module',
+      body: 'This demonstrates thorough and complete understanding of Ruby and databases by building multiple projects while collaborating and pair programming remotely with developers across the world.',
+      year: 'July 2023',
+      link: 'https://www.credential.net/91ebe6e5-c5f5-40de-80e5-7ca11778964f'
+    },
+  ],
   education: [
     {
       institution: 'Microverse',
@@ -73,8 +79,8 @@ const config = {
       to: '2023',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Certifcate',
+      institution: 'HarvardX',
+      degree: "CS50's Introduction to Computer Science",
       from: '2021',
       to: '2021',
     },
@@ -98,11 +104,11 @@ const config = {
     },*/
   ],
   // Display blog posts from your medium or dev account. (Optional)
-  blog: {
+  /*blog: {
     source: 'medium', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    username: 'newtongh', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
-  },
+  },*/
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },

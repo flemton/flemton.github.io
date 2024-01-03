@@ -12,21 +12,21 @@ const config = {
   },
   social: {
     linkedin: 'newtongh',
-    twitter: 'oalhassan847',
+    twitter: 'newt0nghf',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'newtongh',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    website: '',
+    medium: 'oalhassan847',
+    stackoverflow: '17204311/newton', // example: '1/jeff-atwood'
+    website: 'https://flemton.github.io/',
     phone: '+233554374251',
     email: 'oalhassan847@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://drive.usercontent.google.com/download?id=1kmuNfWz_NIJ3SnI1fgvYJATLLAA8ArdT&export=download&authuser=0&confirm=t&uuid=387a9fb4-f1af-4fda-b0fc-ea0793a6e850&at=APZUnTUX64sTtR_Yl0oe0rsU_avP:1704232842000', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.usercontent.google.com/download?id=1xCBIC1fRW-NWWpIBd64uhqDoI4b_Int0&export=download&authuser=0&confirm=t&uuid=5b948354-6a84-4c13-a4ec-ee653d5a8ddb&at=APZUnTVLkAFnUc7agnJRn5V5U6Rm:1704248631909', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -38,6 +38,7 @@ const config = {
     'MySQL',
     'PostgreSQL',
     'Git',
+    'Redux.js',
     'CSS',
   ],
   experiences: [

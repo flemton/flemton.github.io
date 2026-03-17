@@ -23,7 +23,16 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   loading,
   avatarRing,
   resumeFileUrl,
-}): JSX.Element => {
+}): React.JSX.Element => {
+  const normalizedResumeUrl = resumeFileUrl
+    ? /^(?:[a-z]+:)?\/\//i.test(resumeFileUrl)
+      ? resumeFileUrl
+      : `${import.meta.env.BASE_URL}${resumeFileUrl.replace(/^\/+/, '')}`
+    : undefined;
+  const isDirectDownload =
+    !!resumeFileUrl && /\.(pdf|doc|docx)$/i.test(resumeFileUrl);
+  const resumeLabel = isDirectDownload ? 'Download Resume' : 'View Resume';
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="grid place-items-center py-8">
@@ -76,20 +85,20 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               : profile.bio}
           </div>
         </div>
-        {resumeFileUrl &&
+        {normalizedResumeUrl &&
           (loading ? (
             <div className="mt-6">
               {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
             </div>
           ) : (
             <a
-              href={resumeFileUrl}
+              href={normalizedResumeUrl}
               target="_blank"
               className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
+              {...(isDirectDownload ? { download: true } : {})}
               rel="noreferrer"
             >
-              Download Resume
+              {resumeLabel}
             </a>
           ))}
       </div>

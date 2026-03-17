@@ -2,15 +2,7 @@
 
 const CONFIG = {
   github: {
-<<<<<<< HEAD:gitprofile.config.js
-    username: 'flemton', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 15, // How many projects to display.
-    exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
-      projects: ['my-portfolio', 'flemton.github.io', 'flemton'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
-=======
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'flemton',
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn, set base to '/'.
@@ -20,20 +12,25 @@ const CONFIG = {
   base: '/gitprofile/',
   projects: {
     github: {
-      display: true, // Display GitHub projects?
+      display: true,
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'automatic',
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        sortBy: 'updated',
+        limit: 15,
         exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          forks: true, // Forked projects will not be displayed if set to true.
+          projects: [
+            'my-portfolio',
+            'flemton.github.io',
+            'flemton',
+            'flemton/flemton',
+          ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [''], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -41,116 +38,123 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'STG Triage',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Offline mobile triage app based on the Ghana Standard Treatment Guidelines with on-device matching, treatment suggestions, and source references.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://apps.apple.com/us/app/stg-triage/id6760623593',
         },
         {
-          title: 'Project Name',
+          title: 'NMC CBT Practice Pro',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Private exam practice and computer-based testing app currently included as a featured portfolio project.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733',
+        },
+        {
+          title: 'Hormesis Elite',
+          description:
+            'Production mobile app for competitive paintball rankings, engagement, and live user workflows.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338',
         },
       ],
->>>>>>> Migrate to TypeScript:gitprofile.config.ts
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
-    description: '',
+    title: 'Portfolio of Newton (Alhassan Osman)',
+    description: 'Full-Stack & Mobile Developer',
     imageURL: '',
   },
   social: {
     linkedin: 'newtongh',
-    twitter: 'newt0nghf',
-    facebook: '',
+    twitter: 'newtonf',
+    facebook: 'newtonghf',
     instagram: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: 'flemton',
     dribbble: '',
     behance: '',
-<<<<<<< HEAD:gitprofile.config.js
     medium: 'oalhassan847',
-    stackoverflow: '17204311/newton', // example: '1/jeff-atwood'
+    stackoverflow: '17204311/newton',
     website: 'https://flemton.github.io/',
     phone: '+233554374251',
     email: 'oalhassan847@gmail.com',
-=======
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
-    telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
->>>>>>> Migrate to TypeScript:gitprofile.config.ts
   },
   resume: {
-    fileUrl:
-      'https://drive.usercontent.google.com/download?id=1xCBIC1fRW-NWWpIBd64uhqDoI4b_Int0&export=download&authuser=0&confirm=t&uuid=5b948354-6a84-4c13-a4ec-ee653d5a8ddb&at=APZUnTVLkAFnUc7agnJRn5V5U6Rm:1704248631909', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'Osman_ATS.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
+    'TypeScript',
     'JavaScript',
-    'Ruby',
     'React.js',
+    'React Native',
+    'Expo',
     'Node.js',
-    'Ruby on Rails',
+    'Firebase',
+    'Google Cloud',
     'Python',
-    'MySQL',
     'PostgreSQL',
+    'MySQL',
     'Git',
-    'Redux.js',
+    'REST APIs',
     'CSS',
   ],
   experiences: [
     {
       company: 'Gallimore Software',
-      position: 'Full Stack Developer',
-      from: 'October 2022',
-      to: 'Present',
+      position: 'Full-Stack Developer',
+      from: 'Oct 2022',
+      to: 'Apr 2024',
       companyLink: 'https://gallimoresoftware.com',
     },
     {
       company: 'Upwork',
-      position: 'Remote Software Developer',
-      from: 'June 2021',
-      to: 'October 2022',
+      position: 'Freelance Software Programmer',
+      from: 'Jun 2021',
+      to: 'Oct 2022',
       companyLink: 'https://upwork.com',
+    },
+    {
+      company: 'Microverse',
+      position: 'Mentor (Volunteer)',
+      from: 'Jan 2023',
+      to: 'Mar 2023',
+      companyLink: 'https://www.microverse.org',
     },
   ],
   certifications: [
     {
-<<<<<<< HEAD:gitprofile.config.js
-      name: 'Microverse Ruby on Rails Module',
-      body: 'This demonstrates mastery of Ruby on Rails by building multiple real-world Rails applications alongside software developers from all over the world',
-      year: 'December 2023',
-      link: 'https://www.credential.net/d5fa78eb-5d2c-4233-adb7-1cd2d87d7452'
+      name: 'Microverse Software Development Program',
+      body: 'Full-stack software development program covering collaborative product development and production-ready engineering practices.',
+      year: '2023',
+      link: 'https://www.microverse.org',
     },
     {
-      name: 'Microverse Ruby/Databases Module',
-      body: 'This demonstrates thorough and complete understanding of Ruby and databases by building multiple projects while collaborating and pair programming remotely with developers across the world.',
-      year: 'July 2023',
-      link: 'https://www.credential.net/91ebe6e5-c5f5-40de-80e5-7ca11778964f'
+      name: "HarvardX: CS50's Introduction to Computer Science",
+      body: 'Foundational computer science coursework covering problem solving, programming, and core software engineering concepts.',
+      year: '2021',
+      link: 'https://pll.harvard.edu/course/cs50-introduction-computer-science',
     },
-  ],
-  education: [
-=======
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+    {
+      name: 'Coursera: Introduction to Mobile Development',
+      body: 'Mobile development fundamentals with a focus on app architecture, user experience, and practical implementation.',
+      year: '',
+      link: 'https://www.coursera.org',
     },
   ],
   educations: [
->>>>>>> Migrate to TypeScript:gitprofile.config.ts
+    {
+      institution: 'University of Cape Coast',
+      degree: 'Bachelor of Science in Computer Science',
+      from: '2019',
+      to: '2023',
+    },
     {
       institution: 'Microverse',
-      degree: 'Full Stack Development',
+      degree: 'Full-Stack Software Development Program',
       from: '2022',
       to: '2023',
     },
@@ -161,62 +165,24 @@ const CONFIG = {
       to: '2021',
     },
   ],
-<<<<<<< HEAD:gitprofile.config.js
-
-  // To hide the `My Projects` section, keep it empty.
-  externalProjects: [
-    /*{
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
-    {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },*/
-  ],
-  // Display blog posts from your medium or dev account. (Optional)
-  /*blog: {
-    source: 'medium', // medium | dev
-    username: 'newtongh', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
-  },*/
-=======
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: 'oalhassan847', // to hide blog section, keep it empty
     limit: 3, // How many articles to display. Max is 10.
   },
->>>>>>> Migrate to TypeScript:gitprofile.config.ts
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: '',
   },
-  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
     id: '',
     snippetVersion: 6,
   },
   themeConfig: {
     defaultTheme: 'wireframe',
-
-    // Hides the switch in the navbar
-    // Useful if you want to support a single color mode
     disableSwitch: false,
-
-    // Should use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
-
-    // Display the ring in Profile picture
     displayAvatarRing: true,
-
-    // Available themes. To remove any theme, exclude from here.
     themes: [
       'light',
       'dark',
@@ -249,10 +215,8 @@ const CONFIG = {
       'winter',
       'procyon',
     ],
-
-    // Custom theme, applied to `procyon` theme
     customTheme: {
-      primary: '#fc055b',
+      primary: '#2A72D4',
       secondary: '#219aaf',
       accent: '#e8d03a',
       neutral: '#2A2730',
@@ -261,14 +225,7 @@ const CONFIG = {
       '--rounded-btn': '3rem',
     },
   },
-
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
-
+  footer: `Made with ❤️ by Newton`,
   enablePWA: true,
 };
 

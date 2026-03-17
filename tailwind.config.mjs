@@ -1,9 +1,8 @@
-import CONFIG from './gitprofile.config';
 import daisyui from 'daisyui';
+import CONFIG from './gitprofile.config';
 
-/** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {},
   },

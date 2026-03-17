@@ -16,11 +16,11 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic',
       automatic: {
-        sortBy: 'stars',
+        sortBy: 'updated',
         limit: 15,
         exclude: {
           forks: true, // Forked projects will not be displayed if set to true.
-          projects: ['my-portfolio', 'flemton.github.io', 'flemton'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: ['my-portfolio', 'flemton.github.io', 'flemton', 'flemton/flemton'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {

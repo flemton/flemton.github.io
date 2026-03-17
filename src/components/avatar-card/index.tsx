@@ -29,7 +29,8 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
       ? resumeFileUrl
       : `${import.meta.env.BASE_URL}${resumeFileUrl.replace(/^\/+/, '')}`
     : undefined;
-  const isDirectDownload = !!resumeFileUrl && /\.(pdf|doc|docx)$/i.test(resumeFileUrl);
+  const isDirectDownload =
+    !!resumeFileUrl && /\.(pdf|doc|docx)$/i.test(resumeFileUrl);
   const resumeLabel = isDirectDownload ? 'Download Resume' : 'View Resume';
 
   return (

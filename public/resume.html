@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alhassan (Newton) Osman | Resume</title>
+    <meta
+      name="description"
+      content="Resume of Alhassan (Newton) Osman, full-stack and mobile developer."
+    />
+    <style>
+      :root {
+        --bg: #f5efe3;
+        --surface: rgba(255, 255, 255, 0.78);
+        --surface-strong: #fffdf7;
+        --text: #1f2937;
+        --muted: #5b6472;
+        --line: rgba(31, 41, 55, 0.12);
+        --primary: #b45309;
+        --primary-soft: rgba(180, 83, 9, 0.12);
+        --accent: #0f766e;
+        --shadow: 0 24px 60px rgba(31, 41, 55, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Avenir Next", Avenir, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(180, 83, 9, 0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(15, 118, 110, 0.18), transparent 22%),
+          linear-gradient(180deg, #fbf6eb 0%, var(--bg) 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1.4fr 0.8fr;
+        align-items: stretch;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-main {
+        padding: 34px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        color: var(--primary);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(36px, 6vw, 60px);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+      }
+
+      .headline {
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.5;
+        color: var(--muted);
+        max-width: 42rem;
+      }
+
+      .hero-side {
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .contact-list,
+      .compact-list,
+      .impact-list,
+      .timeline-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact-list li,
+      .compact-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-list li:last-child,
+      .compact-list li:last-child {
+        border-bottom: 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1.05fr 0.95fr;
+        margin-top: 20px;
+      }
+
+      .section {
+        padding: 28px;
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .summary {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .impact-list {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .impact-list li {
+        padding: 16px;
+        border-radius: 20px;
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+      }
+
+      .impact-value {
+        display: block;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        margin-bottom: 6px;
+      }
+
+      .timeline-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+      }
+
+      .timeline-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-bottom: 10px;
+      }
+
+      .timeline-role {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .timeline-company {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .timeline-period {
+        color: var(--muted);
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .bullet-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .bullet-list li + li {
+        margin-top: 8px;
+      }
+
+      .project {
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+      }
+
+      .project + .project {
+        margin-top: 14px;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+
+      .project-title {
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .project-link {
+        font-size: 14px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .project-meta {
+        margin-top: 8px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .chip {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: var(--surface-strong);
+        border: 1px solid var(--line);
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .footer-note {
+        margin-top: 20px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        background: var(--text);
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--line);
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .page {
+          max-width: none;
+          padding: 0;
+        }
+
+        .panel {
+          box-shadow: none;
+          backdrop-filter: none;
+        }
+
+        .actions {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page" id="app"></main>
+    <script>
+      const resume = {
+        name: 'Alhassan (Newton) Osman',
+        role: 'Full-Stack & Mobile Developer',
+        tagline:
+          'React • React Native (Expo) • Node.js • Firebase • GCP',
+        summary:
+          'Full-stack and mobile developer with 4+ years of experience shipping production-ready web and mobile products. Strong across React and React Native frontends, Node.js backends, Firebase and GCP infrastructure, and product work that balances speed, UX, and reliability.',
+        contact: [
+          ['Email', 'mailto:oalhassan847@gmail.com', 'oalhassan847@gmail.com'],
+          ['LinkedIn', 'https://www.linkedin.com/in/newtongh/', 'linkedin.com/in/newtongh'],
+          ['GitHub', 'https://github.com/flemton', 'github.com/flemton'],
+          ['Phone', 'tel:+233554374251', '+233 55 437 4251'],
+        ],
+        impact: [
+          ['Apps Shipped', 'App Store and Google Play releases'],
+          ['40%', 'Backend performance improvement on production workloads'],
+          ['50%+', 'Cloud cost reduction through backend optimization'],
+          ['10k+', 'Daily requests supported in live backend systems'],
+        ],
+        experience: [
+          {
+            role: 'Full-Stack Developer',
+            company: 'Gallimore Software',
+            period: 'Oct 2022 - Apr 2024',
+            bullets: [
+              'Led development and production deployment of Hormesis Elite, a React Native mobile application serving paying users.',
+              'Migrated backend architecture from .NET Core and SQL Server to Node.js, Firebase, and Google Cloud Platform, improving API response times by about 40 percent and reducing cloud costs by more than 50 percent.',
+              'Built secure authentication, real-time data features, and scalable serverless APIs using Firebase Authentication, Firestore, and cloud-based backend services.',
+              'Fixed production bugs, shipped new product features, and supported a live mobile app with minimal downtime.',
+            ],
+          },
+          {
+            role: 'Freelance Software Programmer',
+            company: 'Upwork',
+            period: 'Jun 2021 - Oct 2022',
+            bullets: [
+              'Delivered full-stack and backend solutions for international clients using JavaScript, Python, Flask, and REST APIs.',
+              'Built secure and scalable APIs handling more than 10,000 daily requests.',
+              'Managed software features from development to deployment in agile client environments.',
+              'Maintained strong client satisfaction through reliable delivery, communication, and problem solving.',
+            ],
+          },
+          {
+            role: 'Mentor (Volunteer)',
+            company: 'Microverse',
+            period: 'Jan 2023 - Mar 2023',
+            bullets: [
+              'Mentored junior developers on JavaScript, React, backend fundamentals, and production-ready coding practices.',
+              'Reviewed code, improved application structure, and guided peers on debugging and software quality.',
+            ],
+          },
+        ],
+        projects: [
+          {
+            title: 'STG Triage',
+            stack: 'React Native (Expo) • Offline-first mobile architecture',
+            link: 'https://apps.apple.com/us/app/stg-triage/id6760623593',
+            summary:
+              'Clinical decision support app for clinicians and health workers in Ghana, built around the Ghana Standard Treatment Guidelines for fast symptom-based triage and prescribing support.',
+          },
+          {
+            title: 'NMC CBT Practice Pro',
+            stack: 'React Native • Firebase',
+            link: 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733',
+            summary:
+              'Mobile study app for UK nurses focused on exam preparation, analytics, progress tracking, and offline study support.',
+          },
+          {
+            title: 'Hormesis Elite',
+            stack: 'React Native (Expo) • Firebase • GCP',
+            link: 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338',
+            summary:
+              'Production mobile app for competitive paintball rankings and engagement workflows with real users and live usage.',
+          },
+        ],
+        skills: [
+          'Product Engineering',
+          'React',
+          'React Native',
+          'Expo',
+          'TypeScript',
+          'JavaScript',
+          'Node.js',
+          'Firebase',
+          'Google Cloud',
+          'REST APIs',
+          'Serverless Functions',
+          'SQL',
+          'Git',
+        ],
+        education: [
+          'University of Cape Coast — Bachelor of Science in Computer Science, 2019 - 2023',
+          'Microverse — Full-Stack Software Development Program, 2022 - 2023',
+          "HarvardX — CS50's Introduction to Computer Science, 2021",
+        ],
+        certifications: [
+          'Microverse Software Development Program',
+          "HarvardX: CS50's Introduction to Computer Science",
+          'Coursera: Introduction to Mobile Development',
+        ],
+      };
+
+      const contactMarkup = resume.contact
+        .map(
+          ([label, href, value]) =>
+            `<li><strong>${label}</strong><br /><a href="${href}">${value}</a></li>`,
+        )
+        .join('');
+
+      const impactMarkup = resume.impact
+        .map(
+          ([value, text]) =>
+            `<li><span class="impact-value">${value}</span><span>${text}</span></li>`,
+        )
+        .join('');
+
+      const experienceMarkup = resume.experience
+        .map(
+          (item) => `
+            <li class="timeline-item">
+              <div class="timeline-top">
+                <div>
+                  <div class="timeline-role">${item.role}</div>
+                  <div class="timeline-company">${item.company}</div>
+                </div>
+                <div class="timeline-period">${item.period}</div>
+              </div>
+              <ul class="bullet-list">
+                ${item.bullets.map((bullet) => `<li>${bullet}</li>`).join('')}
+              </ul>
+            </li>`,
+        )
+        .join('');
+
+      const projectMarkup = resume.projects
+        .map(
+          (item) => `
+            <article class="project">
+              <div class="project-header">
+                <div class="project-title">${item.title}</div>
+                <a class="project-link" href="${item.link}" target="_blank" rel="noreferrer">View App</a>
+              </div>
+              <div class="project-meta">${item.stack}</div>
+              <p class="summary">${item.summary}</p>
+            </article>`,
+        )
+        .join('');
+
+      const skillMarkup = resume.skills
+        .map((item) => `<span class="chip">${item}</span>`)
+        .join('');
+
+      const educationMarkup = resume.education
+        .map((item) => `<li>${item}</li>`)
+        .join('');
+
+      const certificationMarkup = resume.certifications
+        .map((item) => `<li>${item}</li>`)
+        .join('');
+
+      document.getElementById('app').innerHTML = `
+        <section class="hero">
+          <div class="panel hero-main">
+            <div class="eyebrow">Open to Full-Stack and Mobile Roles</div>
+            <h1>${resume.name}</h1>
+            <div class="headline">${resume.role} | ${resume.tagline}</div>
+            <p class="summary">${resume.summary}</p>
+            <div class="actions">
+              <a class="button" href="mailto:oalhassan847@gmail.com">Email Me</a>
+              <a class="button secondary" href="https://github.com/flemton" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button secondary" href="#" onclick="window.print(); return false;">Print / Save PDF</a>
+            </div>
+          </div>
+          <aside class="panel hero-side">
+            <div>
+              <h2>Contact</h2>
+              <ul class="contact-list">${contactMarkup}</ul>
+            </div>
+            <div>
+              <h2>Core Focus</h2>
+              <ul class="compact-list">
+                <li>Production web and mobile delivery</li>
+                <li>Clean UX with strong engineering fundamentals</li>
+                <li>Scalable backend systems and cloud cost awareness</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section class="grid">
+          <div class="panel section">
+            <h2>Selected Experience</h2>
+            <ul class="timeline-list">${experienceMarkup}</ul>
+          </div>
+          <div class="panel section">
+            <h2>Impact Highlights</h2>
+            <ul class="impact-list">${impactMarkup}</ul>
+          </div>
+        </section>
+
+        <section class="grid">
+          <div class="panel section">
+            <h2>Featured Products</h2>
+            ${projectMarkup}
+          </div>
+          <div>
+            <div class="panel section">
+              <h2>Tech Stack</h2>
+              <div class="chip-row">${skillMarkup}</div>
+            </div>
+            <div class="panel section" style="margin-top: 20px;">
+              <h2>Education</h2>
+              <ul class="compact-list">${educationMarkup}</ul>
+            </div>
+            <div class="panel section" style="margin-top: 20px;">
+              <h2>Certifications</h2>
+              <ul class="compact-list">${certificationMarkup}</ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-note">
+          Built to be recruiter-friendly on screen and clean when printed to PDF.
+        </div>
+      `;
+    </script>
+  </body>
+</html>

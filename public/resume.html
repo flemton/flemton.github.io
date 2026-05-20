@@ -344,8 +344,9 @@
         tagline:
           'React • React Native (Expo) • Node.js • Firebase • GCP',
         summary:
-          'Full-stack and mobile developer with 4+ years of experience shipping production-ready web and mobile products. Strong across React and React Native frontends, Node.js backends, Firebase and GCP infrastructure, and product work that balances speed, UX, and reliability.',
+          'Full-stack and mobile developer with 4+ years of experience building, shipping, and maintaining production-ready web and mobile products. Strong across React and React Native frontends, Node.js backends, Firebase and GCP infrastructure, production support, performance optimization, and reliable feature delivery.',
         contact: [
+          ['Address', '', 'RB250 Maple St, Tamale, Ghana'],
           ['Email', 'mailto:oalhassan847@gmail.com', 'oalhassan847@gmail.com'],
           ['LinkedIn', 'https://www.linkedin.com/in/newtongh/', 'linkedin.com/in/newtongh'],
           ['GitHub', 'https://github.com/flemton', 'github.com/flemton'],
@@ -392,9 +393,24 @@
         ],
         projects: [
           {
+            title: 'Tillton POS',
+            stack: 'React Native (Expo) • Firebase Auth • Firebase Realtime Database',
+            link: 'https://apps.apple.com/us/app/tillton-pos/id6765776148',
+            storeLinks: [
+              ['App Store', 'https://apps.apple.com/us/app/tillton-pos/id6765776148'],
+              ['Google Play', 'https://play.google.com/store/apps/details?id=com.flemton.tillton'],
+            ],
+            summary:
+              'Retail point-of-sale and inventory app for managing sales, stock, staff, and store activity from one mobile workflow.',
+          },
+          {
             title: 'STG Triage',
             stack: 'React Native (Expo) • Offline-first mobile architecture',
             link: 'https://apps.apple.com/us/app/stg-triage/id6760623593',
+            storeLinks: [
+              ['App Store', 'https://apps.apple.com/us/app/stg-triage/id6760623593'],
+              ['Google Play', 'https://play.google.com/store/apps/details?id=com.flemton.stgtriage'],
+            ],
             summary:
               'Clinical decision support app for clinicians and health workers in Ghana, built around the Ghana Standard Treatment Guidelines for fast symptom-based triage and prescribing support.',
           },
@@ -402,13 +418,21 @@
             title: 'NMC CBT Practice Pro',
             stack: 'React Native • Firebase',
             link: 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733',
+            storeLinks: [
+              ['App Store', 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733'],
+              ['Google Play', 'https://play.google.com/store/apps/details?id=com.flemton.cbt_practice_pro'],
+            ],
             summary:
-              'Mobile study app for UK nurses focused on exam preparation, analytics, progress tracking, and offline study support.',
+              'Empowers nurses to ace the UK NMC Computer-Based Test (Adult Nursing) with realistic mock exams, adaptive quizzes, detailed analytics, and offline study tools.',
           },
           {
             title: 'Hormesis Elite',
             stack: 'React Native (Expo) • Firebase • GCP',
             link: 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338',
+            storeLinks: [
+              ['App Store', 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338'],
+              ['Google Play', 'https://play.google.com/store/apps/details?id=com.gallimore.hormesis_elite'],
+            ],
             summary:
               'Production mobile app for competitive paintball rankings and engagement workflows with real users and live usage.',
           },
@@ -443,7 +467,7 @@
       const contactMarkup = resume.contact
         .map(
           ([label, href, value]) =>
-            `<li><strong>${label}</strong><br /><a href="${href}">${value}</a></li>`,
+            `<li><strong>${label}</strong><br />${href ? `<a href="${href}">${value}</a>` : value}</li>`,
         )
         .join('');
 
@@ -478,7 +502,12 @@
             <article class="project">
               <div class="project-header">
                 <div class="project-title">${item.title}</div>
-                <a class="project-link" href="${item.link}" target="_blank" rel="noreferrer">View App</a>
+                ${(item.storeLinks || [['View App', item.link]])
+                  .map(
+                    ([label, href]) =>
+                      `<a class="project-link" href="${href}" target="_blank" rel="noreferrer">${label}</a>`,
+                  )
+                  .join(' ')}
               </div>
               <div class="project-meta">${item.stack}</div>
               <p class="summary">${item.summary}</p>

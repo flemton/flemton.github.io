@@ -68,75 +68,77 @@ const ExternalProjectCard = ({
 
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => {
-      const hasLink = !!item.link;
-      const cardClassName = `card shadow-md card-sm bg-base-100 ${
-        hasLink ? 'cursor-pointer' : ''
-      }`;
-      const content = (
-        <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-semibold text-lg tracking-wide text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-20 h-20 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
+      const storeLinks =
+        item.storeLinks && item.storeLinks.length > 0
+          ? item.storeLinks
+          : item.link
+            ? [{ label: 'View Project', url: item.link }]
+            : [];
+
+      const handleProjectClick = (label: string, url: string) => {
+        try {
+          if (googleAnalyticId) {
+            ga.event('Click External Project', {
+              post: `${item.title} - ${label}`,
+            });
+          }
+        } catch (error) {
+          console.error(error);
+        }
+
+        window?.open(url, '_blank');
+      };
+
+      return (
+        <div className="card shadow-md card-sm bg-base-100" key={index}>
+          <div className="p-8 h-full w-full">
+            <div className="flex items-center flex-col">
+              <div className="w-full">
+                <div className="px-4">
+                  <div className="text-center w-full">
+                    <h2 className="font-semibold text-lg tracking-wide text-center opacity-60 mb-2">
+                      {item.title}
+                    </h2>
+                    {item.imageUrl && (
+                      <div className="avatar opacity-90">
+                        <div className="w-20 h-20 mask mask-squircle">
+                          <LazyImage
+                            src={item.imageUrl}
+                            alt={'thumbnail'}
+                            placeholder={skeleton({
+                              widthCls: 'w-full',
+                              heightCls: 'h-full',
+                              shape: '',
+                            })}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <p className="mt-1 text-base-content text-opacity-60 text-sm">
-                    {item.description}
-                  </p>
+                    )}
+                    <p className="mt-1 text-base-content text-opacity-60 text-sm">
+                      {item.description}
+                    </p>
+                    {storeLinks.length > 0 && (
+                      <div className="mt-4 flex flex-wrap justify-center gap-2">
+                        {storeLinks.map((storeLink) => (
+                          <button
+                            className="btn btn-sm btn-outline"
+                            key={storeLink.url}
+                            onClick={() =>
+                              handleProjectClick(storeLink.label, storeLink.url)
+                            }
+                            type="button"
+                          >
+                            {storeLink.label}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      );
-
-      if (!hasLink) {
-        return (
-          <div className={cardClassName} key={index}>
-            {content}
-          </div>
-        );
-      }
-
-      return (
-        <a
-          className={cardClassName}
-          key={index}
-          href={item.link}
-          onClick={(e) => {
-            e.preventDefault();
-
-            try {
-              if (googleAnalyticId) {
-                ga.event('Click External Project', {
-                  post: item.title,
-                });
-              }
-            } catch (error) {
-              console.error(error);
-            }
-
-            window?.open(item.link, '_blank');
-          }}
-        >
-          {content}
-        </a>
       );
     });
   };

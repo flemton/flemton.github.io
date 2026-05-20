@@ -38,20 +38,58 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
+          title: 'Tillton POS',
+          description:
+            'Retail point-of-sale and inventory app for managing sales, stock, staff, and store activity from one mobile workflow.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://apps.apple.com/us/app/tillton-pos/id6765776148',
+          storeLinks: [
+            {
+              label: 'App Store',
+              url: 'https://apps.apple.com/us/app/tillton-pos/id6765776148',
+            },
+            {
+              label: 'Google Play',
+              url: 'https://play.google.com/store/apps/details?id=com.flemton.tillton',
+            },
+          ],
+        },
+        {
           title: 'STG Triage',
           description:
             'Offline mobile triage app based on the Ghana Standard Treatment Guidelines with on-device matching, treatment suggestions, and source references.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://apps.apple.com/us/app/stg-triage/id6760623593',
+          storeLinks: [
+            {
+              label: 'App Store',
+              url: 'https://apps.apple.com/us/app/stg-triage/id6760623593',
+            },
+            {
+              label: 'Google Play',
+              url: 'https://play.google.com/store/apps/details?id=com.flemton.stgtriage',
+            },
+          ],
         },
         {
           title: 'NMC CBT Practice Pro',
           description:
-            'Private exam practice and computer-based testing app currently included as a featured portfolio project.',
+            'Empowers nurses to ace the UK NMC Computer-Based Test (Adult Nursing) with realistic mock exams, adaptive quizzes, detailed analytics, and offline study tools.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733',
+          storeLinks: [
+            {
+              label: 'App Store',
+              url: 'https://apps.apple.com/us/app/nmc-cbt-practice-pro/id6756345733',
+            },
+            {
+              label: 'Google Play',
+              url: 'https://play.google.com/store/apps/details?id=com.flemton.cbt_practice_pro',
+            },
+          ],
         },
         {
           title: 'Hormesis Elite',
@@ -60,6 +98,16 @@ const CONFIG = {
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338',
+          storeLinks: [
+            {
+              label: 'App Store',
+              url: 'https://apps.apple.com/gh/app/hormesis-elite/id6449320338',
+            },
+            {
+              label: 'Google Play',
+              url: 'https://play.google.com/store/apps/details?id=com.gallimore.hormesis_elite',
+            },
+          ],
         },
       ],
     },

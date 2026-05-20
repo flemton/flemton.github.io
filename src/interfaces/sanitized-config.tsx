@@ -24,6 +24,10 @@ export interface SanitizedExternalProject {
   description?: string;
   imageUrl?: string;
   link: string;
+  storeLinks?: {
+    label: string;
+    url: string;
+  }[];
 }
 
 export interface SanitizedExternalProjects {

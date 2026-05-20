@@ -17,6 +17,7 @@ Full-Stack and Mobile Developer with 4+ years of experience building, shipping, 
 ## EXPERIENCE
 
 ### Gallimore Software
+
 Full-Stack Developer | Remote | Oct 2022 - Apr 2024
 
 - Led development and production deployment of Hormesis Elite, a React Native mobile application serving paying users.
@@ -25,6 +26,7 @@ Full-Stack Developer | Remote | Oct 2022 - Apr 2024
 - Fixed production bugs, shipped new product features, and supported a live mobile app with minimal downtime.
 
 ### Upwork
+
 Freelance Software Programmer | Remote | Jun 2021 - Oct 2022
 
 - Delivered full-stack and backend solutions for international clients using JavaScript, Python, Flask, and REST APIs.
@@ -34,6 +36,7 @@ Freelance Software Programmer | Remote | Jun 2021 - Oct 2022
 ## PROJECTS
 
 ### Tillton POS
+
 Retail point-of-sale and inventory app for managing sales, stock, staff, and store activity from one mobile workflow.
 
 - Built with React Native, Expo, Firebase Authentication, Firebase Realtime Database, and local device persistence.
@@ -41,6 +44,7 @@ Retail point-of-sale and inventory app for managing sales, stock, staff, and sto
 - Google Play: https://play.google.com/store/apps/details?id=com.flemton.tillton
 
 ### STG Triage
+
 Clinical decision-support mobile app for clinicians, doctors, and health workers in Ghana using the Ghana Standard Treatment Guidelines.
 
 - Built as an offline-first React Native and Expo app for fast symptom-based triage and treatment guidance.
@@ -48,6 +52,7 @@ Clinical decision-support mobile app for clinicians, doctors, and health workers
 - Google Play: https://play.google.com/store/apps/details?id=com.flemton.stgtriage
 
 ### NMC CBT Practice Pro
+
 Empowers nurses to ace the UK NMC Computer-Based Test (Adult Nursing) with realistic mock exams, adaptive quizzes, detailed analytics, and offline study tools.
 
 - Built with React Native and Firebase with realistic mocks, progress tracking, analytics, and offline study support.
@@ -55,6 +60,7 @@ Empowers nurses to ace the UK NMC Computer-Based Test (Adult Nursing) with reali
 - Google Play: https://play.google.com/store/apps/details?id=com.flemton.cbt_practice_pro
 
 ### Hormesis Elite
+
 Production mobile application for competitive paintball rankings and user engagement.
 
 - Built with React Native, Expo, Firebase, and Google Cloud Platform.
@@ -64,9 +70,11 @@ Production mobile application for competitive paintball rankings and user engage
 ## EDUCATION
 
 ### University of Cape Coast
+
 Bachelor of Science in Computer Science | Cape Coast, Ghana | Sep 2019 - Jun 2023
 
 ### Microverse
+
 Full-Stack Software Development Program | Remote | Nov 2022 - Dec 2023
 
 ## CERTIFICATIONS
